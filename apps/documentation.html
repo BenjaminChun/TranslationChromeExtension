@@ -1,0 +1,85 @@
+<head>
+    <link rel="stylesheet" href="./css/popup.css">
+  </head>
+  <body>
+    <nav>
+      <a class="tab translate-nav" href="./popup.html">Translate</a>
+      <a class="tab update-keyword-nav" href="./combine.html">Keywords</a>
+      <a class="tab country-nav" href="./country.html">Country</a>
+      <a class="tab export-nav" href="./export.html">Export</a>
+      <a class="tab documentation-nav active" href="./documentation.html">Documentation</a>
+    </nav>
+    <div class="readme">
+        <div class="description section">
+            <div class="heading">
+                <h2>Description</h2>
+            </div>
+            <div class="content paragraph">
+                This tool allows users to translate their EN mailers to other CLE languages in-place on stripo itself.<br>
+                It allows for undo of most recent translation. <br>
+                It includes CRUD operations for the translations.json file that contains the key and values for translation. <br>
+                Adding keywords will be done via text input and Updating and Deleting will be done via a dropdown of the regex keywords that is being replaced/matched. <br>
+                Highlighting selected keyword is available after text input or selection from dropdown. <br>
+                Tool also allows for users to export their local translations.json. <br>
+                NOTE:
+                Recommended workflow is for users to overwrite the translations.json in the folder that contains the extension BEFORE distributing to other users to prevent any problems.
+            </div>
+        </div>
+        <div class="features section">
+            <div class="heading">
+                <h2>Features</h2>
+            </div>
+            <div class="content">
+                <ol>
+                    <li>Translate from EN to other CLE languages + Undo translation</li>
+                    <li>Add new Keywords and Replacements for other CLE languages</li>
+                    <li>Update existing keywords</li>
+                    <li>Delete existing keywords</li>
+                    <li>Download/Copy translations.json -> distribution</li>
+                </ol>
+            </div>
+        </div>
+        <div class="howtouse section">
+            <div class="heading">
+                <h2>How to use</h2>
+            </div>
+            <div class="content">
+                <ol>
+                    <li>User wants to <u>translate</u> -> just go to <u>translate</u></li>
+                    <li>User finds that there is a keyword/phrase that they would want to <u>add</u></li>
+                    <ol>
+                        <li>Go to keywords tab</li>
+                        <li>Type in the keyword they are looking to change</li>
+                        <li>Press highlight and check the page to see the affected areas</li>
+                        <li>Decides to pursue the translation and inputs the other translations into the fields and adds into the localstorage</li>
+                        <li><u>Consensus</u> to not have a powerful new keyword for eg. 'for' / any single word</li>
+                    </ol>
+                    <li>User finds that he has made an error with the previous addition and would like to <u>change</u> it without accessing codebase</li>
+                    <ol>
+                        <li>Go to keywords tab</li>
+                        <li>Type or Selects from dropdown of keys for relevant keyword</li>
+                        <li>Checks through the populated input fields for errors such as spelling</li>
+                        <li>Change and update to json</li>
+                        <li>Check the affected area by selecting a language to change to and click test</li>
+                        <li>Once tested, clear the changes and then move on to translate or perform other tasks</li>
+                        <li>Another <u>consensus</u> that updates are only done for minor mistakes like spelling/update to more accurate foreign language translation</li>
+                    </ol>
+                    <li>User has made changes and would like to <u>save changes</u> on filesys</li>
+                    <ol>
+                        <li>Click on export</li>
+                        <li>Click on copy/download</li>
+                        <li>Open JSON file in text editor and replace contents with copied clipboard / download and <u>replace</u> the current translations.json</li>
+                    </ol>
+                    <li>User <u>distributes</u> and passes its full zip folder/translations.json file to another user</li>
+                    <ol>
+                        <li>User exports the file and saves it on local before pushing to github for version control</li>
+                        <li>User passes it through messaging channels</li>
+                        <li>New user will follow instructions to developer mode and then drag the zip file into extension manager page</li>
+                    </ol>
+                </ol> 
+            </div>
+        </div>
+        
+    </div>
+  </body>
+  

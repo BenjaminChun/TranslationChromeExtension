@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./css/popup.css">
+  </head>
+  <body>
+    <nav>
+      <a class="tab translate-nav active" href="./popup.html">Translate</a>
+      <a class="tab update-keyword-nav" href="./combine.html">Keywords</a>
+      <a class="tab country-nav" href="./country.html">Country</a>
+      <a class="tab export-nav" href="./export.html">Export</a>
+      <a class="tab documentation-nav" href="./documentation.html">Documentation</a>
+    </nav>
+    <div class="impt-info">
+      <h1>Important Info</h1>
+      <div class="content">
+        Ensure that you are changing FROM EN!<br>Perform a <b>Reset</b> on the Local Storage if you just imported a new translations.json / unpacked a new version of the extension! 
+        <br>Else the translations might be outdated.
+      </div>
+    </div>
+    <div class="translation-inputs">
+        <div class="dropdown">
+            <select name="target-country" id="target-country">
+                <option value="none" selected hidden>Select an Option</option>
+            </select>
+        </div>
+        <div style="width:100%; display: grid; grid-template-columns: auto auto auto auto; gap: 10px;">
+          <button class="button button-3 button-red" id="undo" role="button" disabled>Undo</button>
+          <button class="button button-3 button-blue" id="translate" role="button" disabled>Translate</button>
+          <button class="button button-3" style="visibility: hidden;"></button>
+          <button class="button button-3" id="clear-localstorage" role="button">Reset</button>
+      </div>
+    </div>
+    <script type="module" src="./scripts/popup.js"></script>
+  </body>
+</html>

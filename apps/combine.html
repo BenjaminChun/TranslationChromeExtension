@@ -1,0 +1,36 @@
+<head>
+  <link rel="stylesheet" href="./css/popup.css">
+</head>
+<body>
+  <nav>
+    <a class="tab translate-nav" href="./popup.html">Translate</a>
+    <a class="tab update-keyword-nav active" href="./combine.html">Keywords</a>
+    <a class="tab country-nav" href="./country.html">Country</a>
+    <a class="tab export-nav" href="./export.html">Export</a>
+    <a class="tab documentation-nav" href="./documentation.html">Documentation</a>
+  </nav>
+  <div class="combine-body">
+    <div class="EN-div">
+      <span>EN</span>
+      <div id="key-name" style="color: #333; padding-top: 3px; padding-bottom: 3px;">
+      </div>
+      <div class="EN-select-dropdown dropdown">
+        <input class="dropbtn" placeholder="Search / Add"></input>
+        <div id="myDropdown" class="dropdown-content">
+        </div>
+      </div>
+    </div>
+    <div class="replacement-div">
+    </div>
+    
+  </div>
+  <div class="button-row">
+    <button class="button-red button button-3" id="delete" role="button" disabled hidden>Delete</button>
+    <button class="button button-3 button-blue" id="highlight" role="button" disabled>Highlight</button>
+    <button class="button button-3" id="update" role="button" disabled>Update</button>
+    <button class="button button-3" id="add" role="button" disabled>Add</button>
+    <button class="button button-3 button-grey" disabled id="clear" role="button">Clear Highlight</button>
+  </div>
+  <script type="module" src="./scripts/combine.js"></script>
+  
+</body>

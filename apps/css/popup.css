@@ -1,0 +1,307 @@
+/* general */
+:root{
+  --header-font: akrobat, sans-serif;
+  --content-font: proxima-nova, Helvetica, Arial, sans-serif;
+  --creative-blue: #2980B9;
+  --creative-red: #b51c29;
+}
+.hidden{
+  visibility: hidden;
+}
+nav{
+  display: flex;
+  justify-content: space-around;
+  font-family: akrobat, sans-serif;
+}
+.tab{
+  font-family: var(--header-font);
+  padding: 5px 10px;
+  font-size: large;
+  color: #666;
+  border-bottom: rgb(204, 204, 204) 1px solid;
+  text-decoration: none;
+  white-space: nowrap;
+}
+a.tab.active{
+  color: #000;
+  font-weight: 600;
+  border-top: rgb(204, 204, 204) 1px solid;
+  border-left: rgb(204, 204, 204) 1px solid;
+  border-right: rgb(204, 204, 204) 1px solid;
+  border-bottom: none;
+}
+/* popup */
+.impt-info{
+  padding: 10px;
+  margin: 5px;
+  border: #888 1px solid;
+}
+select,option{
+  font-family: var(--content-font);
+  font-weight: 400;
+}
+.keyword{
+  font-family: var(--content-font);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.translation-inputs{
+    margin: 10px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.translation-inputs #target-country{
+    text-align: start;
+    padding: 4px 6px;
+    margin-bottom: 10px;
+    font-size: large;
+}
+/* combine */
+.combine-body{
+  width: 800px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+.EN-div{
+  padding: 10px;
+  border: 1px #666 dashed;
+  position: absolute;
+  top: 40vh;
+  font-family: var(--header-font);
+  background-color: white;
+}
+.replacement-div{
+  position: absolute;
+  right: 23px;
+  top: 60px;
+  width: 490px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 40px;
+}
+.block{
+  padding: 5px;
+  border: 1px #555 dotted;
+  margin: 5px;
+  width: 100%;
+  font-family: var(--content-font);
+  background-color: white;
+}
+.button-row{
+  position: fixed;
+  bottom: 0px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+/* keyword */
+.new-keyword-div{
+  margin: 10px 0px;
+}
+/* .inline{
+  display: flex;
+} */
+/* .highlight{
+  border: #298e46 1px dashed;
+  padding: 5px 10px 10px;
+  opacity: 10%;
+} */
+h1{
+  font-family: var(--header-font);
+  color: #000;
+  font-size: 20px;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  /* border-bottom: #298e46 1px dashed; */
+}
+h2{
+  font-family: var(--content-font);
+  color: #333;
+  letter-spacing: 0.8px;
+  font-size: 18px;
+  /* text-align: center; */
+  margin: 10px;
+}
+input{
+  font-family: var(--content-font);
+  width: 100%;
+}
+input:disabled{
+  cursor: not-allowed;
+}
+.replacement{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+/* update */
+.test-zone{
+  margin: 10px;
+}
+input{
+  font-family: var(--content-font);
+  font-size: 14px;
+  padding: 5px;
+}
+/* Dropdown Button */
+.dropbtn {
+  background-color: #1f394c;
+  color: white;
+  padding: 10px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  width: 100%;
+  text-align: left;
+  font-family: var(--content-font);
+}
+.dropbtn::placeholder{
+  color: white;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+  
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  overflow-y: scroll;
+  min-height: 30px;
+  max-height: 150px;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  /* padding: 12px 16px; */
+  min-height: 30px;
+  text-decoration: none;
+  display: block;
+  border-bottom: #666 1px dashed;
+  font-size: large;
+}
+.dropdown-content a::after{
+  font-size: x-small;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd;}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* documentation */
+.content{
+  font-family: var(--content-font);
+  font-size: 15px;
+}
+ol{
+  margin: 3px;
+}
+li{
+  margin: 3px;
+}
+.paragraph{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 26px;
+}
+.section{
+  margin: 5px;
+}
+
+/* https://getcssscan.com/css-buttons-examples */
+.button-red{
+  background-color: var(--creative-red) !important;
+}
+.button-blue{
+  background-color: var(--creative-blue) !important;
+}
+.button-3 {
+    font-weight: normal;
+    appearance: none;
+    background-color: #2ea44f;
+    border: 1px solid rgba(27, 31, 35, .15);
+    /* border-radius: 6px; */
+    box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    padding: 6px 16px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+  
+  .button-3:focus:not(:focus-visible):not(.focus-visible) {
+    box-shadow: none;
+    outline: none;
+  }
+  
+  .button-3:hover {
+    background-color: #2c974b;
+  }
+  .button-red:hover{
+    background-color: #f00 !important;
+  }
+  .button-blue:hover{
+    background-color: #2cabff !important;
+  }
+  
+  .button-3:focus {
+    box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+    outline: none;
+  }
+  
+  .button-3:disabled {
+    background-color: #94d3a2;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: not-allowed;
+  }
+  .button-red:disabled{
+    background-color: rgb(245, 108, 108) !important;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: not-allowed;
+  }
+  .button-blue:disabled{
+    background-color: #5f9bc4 !important;
+    border-color: rgba(27, 31, 35, .1);
+    color: rgba(255, 255, 255, .8);
+    cursor: not-allowed;
+  }
+  .button-3:enabled:active {
+    background-color: #298e46;
+    box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+  }

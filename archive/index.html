@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Localisation Tool</title>
+        <link href="./style.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <span class="navbar-brand mx-5">Localisation Tool</span>
+        </nav>  
+        <div class="container">
+            <div class="row">
+                <div class="left-section col-sm-5 col-md-5 col-lg-5">
+                    <div id="editor">Enter your input here</div>
+                </div>
+                <div class="middle-section col-sm-2 col-md-2 col-lg-2">
+                    <div class="translation-inputs">
+                        <div class="dropdown">
+                            <select name="target-country" id="target-country">
+                                <option value="none" selected disabled hidden>Select an Option</option>
+                                <option value="nordic">EN TO NORDIC</option>
+                                <option value="gr">EN TO GR</option>
+                                <option value="uk">EN TO UK</option>
+                                <option value="fr">EN TO FR</option>
+                                <option value="it">EN TO IT</option>
+                                <option value="de">EN TO DE</option>
+                                <option value="es">EN TO ES</option>
+                                <option value="pl">EN TO PL</option>  
+                            </select>
+                        </div>
+                        <div>
+                            <button class="button button-3" id="translate" role="button" disabled>Translate</button>
+                        </div>
+                    </div>
+                    <div>
+                        <button id="copy" class="button button-3" role="button">Copy ></button>
+                    </div>
+                </div>
+                <div class="right-section col-sm-5 col-md-5 col-lg-5">
+                    <div id="editor2">Output delivered here</div>
+                </div>
+            </div>
+        </div>
+        
+
+        <script src="./ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+        <script type="module" src="./regex_new.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        <script>
+            var editor = ace.edit("editor");
+            editor.setTheme("ace/theme/cloud9_day");
+            editor.session.setMode("ace/mode/html");
+            editor.session.setUseWrapMode(true);
+            editor.setShowPrintMargin(false);
+            var editor2 = ace.edit("editor2");
+            editor2.setTheme("ace/theme/cloud9_day");
+            editor2.session.setMode("ace/mode/html");
+            editor2.session.setUseWrapMode(true);
+            editor2.setShowPrintMargin(false);
+        </script>
+    </body>    
+</html>
